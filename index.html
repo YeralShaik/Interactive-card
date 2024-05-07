@@ -11,36 +11,43 @@
 </head>
 <body>
     <main class="main-container">
-        
             <img class="background" src="./images/bg-main-mobile.png" alt="">
-        
             <div class="card-container">
+                <div class="card-front-container">
+                 
                 <img 
                     class="card-front"
                     src="./images/bg-card-front.png" alt="">
-                <img
-                    class="card-back"
-                    src="./images/bg-card-back.png" alt="">
+                    <img class="logo" src="./images/card-logo.svg" alt="">
+                    <p class="number-card">0000 0000 0000 0000</p>
+                    <p class="name-card">Yeraldin Espinosa</p>
+                    <p class="expiry-date">00/00</p>
+                </div>
+                <div class="card-back-container">
+                     <img
+                        class="card-back"
+                        src="./images/bg-card-back.png" alt="">
+                        <p class="cvc">000</p>
+                </div>
+                
             </div>
         
         <div class="form-container">
             <form action="" class="form">
-                <label for="">CARDHOLDER NAME
-                    <input type="text" placeholder="Name">
-                </label>
-                <label for=""> CARD NUMBER
-                    <input type="text" placeholder="">
-                </label>
-                <div class="label-month-year-cvc">
-                    <label for="" > EXP. DATE (MM/YY)  CVC 
-                        <input type="day"name="" id="input-month" placeholder="MM">
+                <label for="">CARDHOLDER NAME</label>
+                    <input type="text" placeholder="e.j. Jane Appleseed">
+            
+                <label for=""> CARD NUMBER</label>
+                    <input type="text" placeholder="e.j. 1234 5678 9123 000">
+            
+                
+                    <p> EXP. DATE (MM/YY) CVC </p>  
+                    <div class="label-month-year-cvc">
+                    <input type="day"name="" id="input-month" placeholder="MM">
                         <input type="year" name="" id="input-year" placeholder="YY">
-                        <input type="text" name="" id="input-cvc">
-                 </label>
-                 
-                    
+                        <input type="text" name="" id="input-cvc" placeholder="e.j.">
                 </div>
-                <button class="submit">Confirm</button>
+                <button class="button">Confirm</button>
             </form>
         </div>
     </main>
