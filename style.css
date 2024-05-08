@@ -1,6 +1,6 @@
 :root {
-    --Linear-gradient-active-input-border:hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
-    -Red-input-errors: hsl(0, 100%, 66%);
+    --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --Red-input-errors: hsl(0, 100%, 66%);
     --White: hsl(0, 0%, 100%);
     --Light-grayish-violet: hsl(270, 3%, 87%);
     --Dark-grayish-violet: hsl(279, 6%, 55%);
@@ -26,283 +26,282 @@ body {
 }
 
 
-
-@media (max-width: 375px) {
-    
-.main-container {
-    display: flex;
-    justify-content: flex-start;
-    width: 100vh;
-    height: 100vh;
- 
-}
-.background {
-    width: 100vh;
-    position:absolute;
-    height: 250px;
-}
-
-.card-container{
-
-    display: flex;
-
-    justify-content: center;
-    padding: 40px;
-    position: relative;
-}
-.card-back-container {
-    position: relative;
-    color: azure;
-}
-.card-front-container{
-
-    color: azure;
-    position: absolute;
-    
-}
-.card-front {
-    width: 300px;
-    position: absolute;
-    z-index: 2;
-    margin-top: 90px;
-    
-}
-.logo {
-    position: absolute;
-    z-index: 2;
-    top: 110px;
-    width: 60px;
-    left: 24px;
-}
-.number-card,
-.name-card,
-.expiry-date {
-    position: absolute;
-    z-index: 2; 
-}
-.number-card {
-    top: 160px;
-    left: 30px;
-    width: 300px;
-    word-spacing: 8px;
-}
-
-.name-card {
-    bottom: 40px;
-    left: 30px;
-    top: 200px;
-    font-weight: lighter;
-    font-size: 14px;
-    width: 200px;
-}
-.expiry-date {
-    bottom: 20px;
-    right: 30px;
-    top: 200px;
-    left: 230px;
-    font-weight: lighter;
-    font-size: 12px;
-    background-color: aqua;
-}
-
-
-.cvc {
-    position: absolute;
-    top: 58px;
-    left: 290px;
-    font-weight: lighter;
-    font-size: 14px;
-    z-index: 1; 
-}
-
-.card-back-container {
-    position: relative;
-}
-
-.card-back {
-    
-    width: 300px;
-    position: absolute;
-    z-index: 1;
-    margin-left: 60px;
-}
-
-
-.form-container {
-    width: 100%;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    margin-top: 230px;  
-    position: absolute;
-
-}
-
-.form {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 18px;
-    padding: 80px 40px;
-    margin-top: 60px;
-    width: 80%;
-    height: auto;
-}
-input {
-    width: 100%;
-    height: 48px;
-    border-radius: 8px;
-    border: solid 1px;
-    border-color: var(--Very-dark-violet);
-    padding: 10px;
- 
-    margin-bottom: 10px;
-}
-label {
-    padding-bottom: 6px;
-}
-
-
-.label-month-year-cvc {
-    display: flex;
-    width: auto; 
-}
-
-#input-month,
-#input-year {
-    
-    width: 50px;
-    margin-right: 8px;
-}
-
-#input-cvc {
-    width: 90px;
-}
-
-.button {
-    height: 56px;
-    padding: 12px;
-    margin-top: 24px;
-    border-radius: 10px;
-    border: none;
-    font-size: 18px;
-    background: var(--Very-dark-violet);
-    color: var(--Light-grayish-violet);
-}
-}
-
-
 /*DESKTOP*/
     
 .main-container {
-   width: auto;
-   height: 100vh;
-   display: flex;
-
- 
-}
-.background {
-    width: 70vh;
-    position:absolute;
+    width: auto;
     height: 100vh;
-}
-
-.card-container{
-
     display: flex;
-    justify-content: center;
-    position: relative;
-    padding: 80px 200px;
+ 
+  
+ }
+ .background {
+     width: 70vh;
+     position:absolute;
+     height: 100vh;
+ }
+ 
+ .card-container{
+ 
+     display: flex;
+     justify-content: center;
+     position: relative;
+     padding: 80px 200px;
+ }
+ .card-back-container {
+     position: relative;
+     color: azure;
+ }
+ .card-front-container{
+ 
+     color: azure;
+     position: absolute;
+     
+ }
+ .card-front {
+     width: 350px;
+     position: absolute;
+     z-index: 1;
+     margin-top: 10px;
+ 
+     
+ }
+ .logo {
+     position: absolute;
+     z-index: 2;
+     top: 30px;
+     width: 60px;
+     left: 24px;
+ }
+ .number-card,
+ .name-card,
+ .expiry-date {
+     position: absolute;
+     z-index: 2; 
+ }
+ .number-card {
+     top: 100px;
+     width: 500px;
+     left: 30px;
+     font-size: 18px;
+     word-spacing: 8px;
+ }
+ 
+ .name-card {
+     bottom: 40px;
+     left: 30px;
+     top: 140px;
+     font-weight: lighter;
+     font-size: 18px;
+     width: 200px;
+     color: var(--Light-grayish-violet);
+ }
+ .expiry-date {
+     bottom: 20px;
+     right: 30px;
+     top: 150px;
+     left: 290px;
+     font-weight: lighter;
+     font-size: 12px;
+     color: var(--Light-grayish-violet);
+ }
+ 
+ 
+ .cvc {
+     position: absolute;
+     top: 300px;
+     left: 350px;
+     font-weight: lighter;
+     font-size: 14px;
+     z-index: 1; 
+ }
+ 
+ .card-back-container {
+     position: relative;
+ }
+ 
+ .card-back {
+     
+     width: 350px;
+     position: absolute;
+     z-index: 1;
+     margin-left: 80px;
+     top: 230px;
+ }
+ 
+ 
+ .form-container {
+     width: 40%;
+     height: 450px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 40px 700px;
+     position: absolute;
+ 
+ }
+ 
+ .form {
+ 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     font-size: 14px;
+     padding: 80px 40px;
+     margin-top: 60px;
+     width: 80%;
+     height: auto;
+ }
+ input {
+     width: 100%;
+     height: 38px;
+     border-radius: 8px;
+     border: solid 1px;
+     border-color: var(--Light-grayish-violet);
+     padding: 10px;
+  
+     margin-bottom: 10px;
+ }
+ label {
+     padding-bottom: 6px;
+ }
+ 
+ input::placeholder{
+    color: var(--Light-grayish-violet);
 }
-.card-back-container {
-    position: relative;
-    color: azure;
+ .label-month-year-cvc {
+     display: flex;
+     width: auto; 
+ }
+ 
+ #input-month,
+ #input-year {
+     
+     width: 50px;
+     margin-right: 8px;
+ }
+ 
+ #input-cvc {
+     width: 90px;
+ }
+ 
+ .button {
+     height: 48px;
+     padding: 12px;
+     margin-top: 24px;
+     border-radius: 10px;
+     border: none;
+     font-size: 18px;
+     background: var(--Very-dark-violet);
+     color: var(--Light-grayish-violet);
+     cursor: pointer;
+ }
+.button:hover {
+    background-color: var(--Light-grayish-violet);
 }
-.card-front-container{
-
-    color: azure;
-    position: absolute;
+ @media (max-width: 425px) {
     
-}
-.card-front {
-    width: 350px;
-    position: absolute;
-    z-index: 1;
-    margin-top: 10px;
+    .main-container {
+        display: flex;
+        justify-content: flex-start;
+        width: 100vh;
+        height: auto;
 
+    }
+    .background {
+        width: 100vh;
+        position:absolute;
+        height: 250px;
+    }
     
-}
-.logo {
-    position: absolute;
-    z-index: 2;
-    top: 30px;
-    width: 60px;
-    left: 24px;
-}
-.number-card,
-.name-card,
-.expiry-date {
-    position: absolute;
-    z-index: 2; 
-}
-.number-card {
-    top: 100px;
-    width: 500px;
-    left: 30px;
-    font-size: 18px;
-    word-spacing: 8px;
-}
+    .card-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
 
-.name-card {
-    bottom: 40px;
-    left: 30px;
-    top: 140px;
-    font-weight: lighter;
-    font-size: 18px;
-    width: 200px;
-}
-.expiry-date {
-    bottom: 20px;
-    right: 30px;
-    top: 150px;
-    left: 290px;
-    font-weight: lighter;
-    font-size: 12px;
-    background-color: aqua;
-}
+    }
+    .card-back-container {
+        position: relative;
+        color: azure;
+    }
 
-
-.cvc {
-    position: absolute;
-    top: 300px;
-    left: 350px;
-    font-weight: lighter;
-    font-size: 14px;
-    z-index: 1; 
-}
-
-.card-back-container {
-    position: relative;
-}
-
-.card-back {
+    .card-front {
+        width: 280px;
+        z-index: 2;
+        top: 100px;
+        
+    }
+    .logo {
+        position: absolute;
+        z-index: 2;
+        top: 130px;
+        width: 60px;
+        left: 20px;
+    }
+    .number-card,
+    .name-card,
+    .expiry-date {
+        position: absolute;
+        z-index: 2; 
+    }
+    .number-card {
+        top: 170px;
+        left: 30px;
+        width: 300px;
+        word-spacing: 8px;
+    }
     
-    width: 350px;
-    position: absolute;
-    z-index: 1;
-    margin-left: 80px;
-    top: 230px;
-}
-
-
-.form-container {
-    width: 40%;
-    height: 450px;
+    .name-card {
+        bottom: 40px;
+        left: 30px;
+        top: 220px;
+        font-weight: lighter;
+        font-size: 14px;
+        width: 200px;
+    }
+    .expiry-date {
+        bottom: 20px;
+        right: 30px;
+        top: 221px;
+        left: 230px;
+        font-weight: lighter;
+        font-size: 12px;
+        background-color: aqua;
+    }
+    
+    
+    .cvc {
+        position: absolute;
+        top: 72px;
+        left: 255px;
+        font-weight: lighter;
+        font-size: 14px;
+        z-index: 1; 
+    }
+    
+    .card-back-container {
+        position: relative;
+    }
+    
+    .card-back {
+      
+        width: 280px;
+        position: absolute;
+        z-index: 1;
+        margin-left: 40px;
+        top: 20px;
+    }
+    
+ .form-container {
+    width: 100vw;
+    height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    margin: 40px 700px;
+    margin: 250px 20px;
     position: absolute;
 
 }
@@ -313,9 +312,9 @@ label {
     flex-direction: column;
     justify-content: center;
     font-size: 14px;
-    padding: 80px 40px;
+    padding: 20px;
     margin-top: 60px;
-    width: 80%;
+    width: 90%;
     height: auto;
 }
 input {
@@ -323,7 +322,7 @@ input {
     height: 38px;
     border-radius: 8px;
     border: solid 1px;
-    border-color: var(--Very-dark-violet);
+    border-color: var(--Light-grayish-violet);
     padding: 10px;
  
     margin-bottom: 10px;
@@ -332,10 +331,13 @@ label {
     padding-bottom: 6px;
 }
 
-
+input::placeholder{
+    color: var(--Light-grayish-violet);
+}
 .label-month-year-cvc {
     display: flex;
     width: auto; 
+    font-size: 14px;
 }
 
 #input-month,
@@ -357,5 +359,6 @@ label {
     border: none;
     font-size: 18px;
     background: var(--Very-dark-violet);
-    color: var(--Light-grayish-violet);
+    color: var(--Linear-gradient);
 }
+    }
