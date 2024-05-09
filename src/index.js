@@ -13,14 +13,17 @@ function numberValidation () {
     const numberCard = document.querySelector('.number-card')
     const errorElement = document.querySelector('.error-number')
     
+    
 
     let errorMessage = ''
 
     if (inputNumber === '') {
         numberCard.textContent = '0000 0000 0000 0000'
+        errorMessage = 'Error: El número de tarjeta no puede estar vacío'
     } else if (!/^\d+$/.test(inputNumber)) {
         errorMessage = 'Error: Solo se permiten números'
-    
+    } else if (inputNumber.length !== 16) { 
+        errorMessage = 'Error: El número de tarjeta debe tener 16 dígitos'
     } else {
         const formattedNumber = inputNumber.replace(/(\d{4})(?=\d)/g, '$1 ')
         numberCard.textContent = formattedNumber;
@@ -50,8 +53,8 @@ function monthValidation () {
     
     } else if (!/^\d+$/.test(inputMonth)) {
         errorMessage = 'Error: Solo se permiten números'
-    } else if ( inputMonth.length > 2) {
-        errorMessage = 'Formato incorrecto'
+    } else if (parseInt(inputMonth) < 1 || parseInt(inputMonth) > 12) { 
+        errorMessage = 'Error: El mes debe estar entre 1 y 12';
     } else {
         userMonth = inputMonth
     }
@@ -82,8 +85,8 @@ function yearValidation() {
     
     } else if (!/^\d+$/.test(inputYear)) {
         errorMessage = 'Error: Solo se permiten números'
-    } else if ( inputYear.length > 2) {
-        errorMessage = 'Formato incorrecto'
+    } else if (!/^\d{2}$/.test(inputYear)) {
+        errorMessage = 'Error: El año debe ser de dos dígitos'
     } else {
         userYear = '/' + inputYear
     }
@@ -114,7 +117,7 @@ function cvcValidation () {
     } else if (!/^\d+$/.test(inputCvc)) {
         errorMessage = 'Error: Solo se permiten números'
     } else if ( inputCvc.length > 3) {
-        errorMessage = 'Formato incorrecto'
+        errorMessage = 'Error: El CVC debe tener hasta tres dígitos'
     } else {
         userCvc = inputCvc
     }
@@ -145,5 +148,16 @@ const buttonConfirm = document.querySelector('.button')
 buttonConfirm.addEventListener('click', (event) => {
     event.preventDefault()
     
-    cardValidated()
+    nameValidation()
+    numberValidation()
+    monthValidation()
+    yearValidation()
+    cvcValidation()
+  
+    // Comprobar si hay errores activos
+    const hasErrors = document.querySelectorAll('.active').length > 0
+  
+    if (!hasErrors) {
+      cardValidated()
+    }
 });

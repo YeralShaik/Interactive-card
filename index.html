@@ -11,14 +11,14 @@
 </head>
 <body>
     <main class="main-container">
-            <img class="background" src="./images/bg-main-mobile.png" alt="">
+            <img class="background" src="./images/bg-main-mobile.png" alt="background">
             <div class="card-container">
                 <div class="card-front-container">
                  
                 <img 
                     class="card-front"
-                    src="./images/bg-card-front.png" alt="">
-                    <img class="logo" src="./images/card-logo.svg" alt="">
+                    src="./images/bg-card-front.png" alt="front card">
+                    <img class="logo" src="./images/card-logo.svg" alt="logo">
                     <p class="number-card">0000 0000 0000 0000</p>
                     <p class="name-card">Name Surname</p>
                     <p class="expiry-date-month"> 00
@@ -28,7 +28,7 @@
                 <div class="card-back-container">
                      <img
                         class="card-back"
-                        src="./images/bg-card-back.png" alt="">
+                        src="./images/bg-card-back.png" alt="back card">
                         <p class="cvc">000</p>
                         
                 </div>
@@ -36,20 +36,20 @@
             </div>
         
         <div class="form-container">
-            <form action="" class="form">
-                <label for="">CARDHOLDER NAME</label>
+            <form  class="form">
+                <label for=carholder/">CARDHOLDER NAME</label>
                 <input class="input-name" type="text" oninput="nameValidation()" placeholder="e.j. Jane Appleseed">
             
-                <label for=""> CARD NUMBER</label>
+                <label for="carnumber"> CARD NUMBER</label>
                     <input class="input-number" type="text" oninput="numberValidation()" placeholder="e.j. 1234 5678 9123 000">
                     <p class="error-number"></p>
                 
                     <p> EXP. DATE (MM/YY) CVC </p>  
                     
                     <div class="label-month-year-cvc">
-                        <input type="day" id="input-month" oninput="monthValidation()" placeholder="MM">
-                        <input type="year" name="" id="input-year" oninput="yearValidation()" placeholder="YY">
-                        <input type="text" name="" id="input-cvc" oninput="cvcValidation()" placeholder="e.j.">
+                        <input type="number" id="input-month" oninput="monthValidation()" placeholder="MM">
+                        <input type="number" name="cardyear" id="input-year" oninput="yearValidation()" placeholder="YY">
+                        <input type="number" name="cardcvc" id="input-cvc" oninput="cvcValidation()" placeholder="e.j.">
                     </div>
                     <p class="error-year"></p>
                 <button class="button">Confirm</button>

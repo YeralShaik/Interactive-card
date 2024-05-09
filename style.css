@@ -201,7 +201,8 @@ body {
      cursor: pointer;
  }
 .button:hover {
-    background-color: var(--Light-grayish-violet);
+    background-color: var(--Dark-grayish-violet);
+    color: var(--Very-dark-violet);
 }
 
 .active {
