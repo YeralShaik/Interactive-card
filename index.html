@@ -21,13 +21,16 @@
                     <img class="logo" src="./images/card-logo.svg" alt="">
                     <p class="number-card">0000 0000 0000 0000</p>
                     <p class="name-card">Name Surname</p>
-                    <p class="expiry-date">00/00</p>
+                    <p class="expiry-date-month"> 00
+                        <p class="expiry-date-year ">/00</p>
+                    </p>
                 </div>
                 <div class="card-back-container">
                      <img
                         class="card-back"
                         src="./images/bg-card-back.png" alt="">
                         <p class="cvc">000</p>
+                        
                 </div>
                 
             </div>
@@ -39,16 +42,25 @@
             
                 <label for=""> CARD NUMBER</label>
                     <input class="input-number" type="text" oninput="numberValidation()" placeholder="e.j. 1234 5678 9123 000">
-            
+                    <p class="error-number"></p>
                 
                     <p> EXP. DATE (MM/YY) CVC </p>  
+                    
                     <div class="label-month-year-cvc">
-                    <input type="day"name="" id="input-month"  placeholder="MM">
-                        <input type="year" name="" id="input-year" placeholder="YY">
-                        <input type="text" name="" id="input-cvc" placeholder="e.j.">
-                </div>
+                        <input type="day" id="input-month" oninput="monthValidation()" placeholder="MM">
+                        <input type="year" name="" id="input-year" oninput="yearValidation()" placeholder="YY">
+                        <input type="text" name="" id="input-cvc" oninput="cvcValidation()" placeholder="e.j.">
+                    </div>
+                    <p class="error-year"></p>
                 <button class="button">Confirm</button>
             </form>
+        </div>
+
+        <div class="inactive" id="complete-card-container">
+            <img src=".//images/icon-complete.svg" alt="">
+            <h1 class="complete-title">THANK YOU</h1>
+            <p class="complete-text">We've added your card details</p>
+            <button class="button-continue">Continue</button>
         </div>
     </main>
     <script src="./src/index.js"></script>
